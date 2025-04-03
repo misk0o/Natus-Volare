@@ -34,11 +34,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: 'SourceSansPro-Regular', sans-serif;
     background-color: var(--background-color);
     color: var(--secondary-color);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar styles */
@@ -55,11 +64,12 @@ body {
 }
 
 .navbar-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .logo {
@@ -105,9 +115,9 @@ body {
 }
 
 /* Hero section */
-.hero {
-    height: 100vh;
+.hero, .services-hero, .contact-hero, .about-hero {
     width: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -118,9 +128,11 @@ body {
     background-repeat: no-repeat;
 }
 
-.hero-content {
+.hero-content, .services-hero-content, .contact-hero-content, .about-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
     z-index: 1;
-    padding: 2rem;
 }
 
 .hero::after, .services-hero::after, .contact-hero::after, .about-hero::after {
@@ -171,10 +183,12 @@ body {
     letter-spacing: 3px;
     color: var(--secondary-color);
     margin-bottom: 0.1rem;
+    max-width: 100%;
 }
 
 .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 2px;
     background: var(--secondary-color);
     margin: 0.5rem auto;
@@ -193,7 +207,8 @@ body {
 
 /* Services section */
 .services {
-    padding: 4rem 2rem;
+    width: 100%;
+    padding: 4rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -203,9 +218,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .service-card {
+    width: 100%;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     overflow: hidden;
@@ -286,14 +303,16 @@ body {
 
 /* Contact section */
 .contact-section {
+    width: 100%;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
     background-color: var(--background-color);
     margin-bottom: 2rem;
 }
 
 .section-divider {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 1px;
     background: var(--secondary-color);
     margin: 0 auto 2rem;
@@ -326,11 +345,13 @@ body {
 
 /* Footer styles */
 .footer {
+    width: 100%;
     background: var(--footer-bg);
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .social-icons {
@@ -699,15 +720,23 @@ body {
     .contact-info-box {
         left: 2rem;
     }
-}
 
-@media (max-width: 992px) {
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
         font-size: 3.5rem;
     }
 
     .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
-        width: 600px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
+        max-width: 600px;
     }
 
     .services {
@@ -771,12 +800,12 @@ body {
     }
 
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 0.5rem 1rem;
     }
 
     .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
-        width: 400px;
+        max-width: 400px;
     }
 
     .hero-subtitle, .collaboration-message, .cta-text {
@@ -812,11 +841,11 @@ body {
 
 @media (max-width: 576px) {
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
-        width: 300px;
+        max-width: 300px;
     }
 
     .hero-subtitle, .collaboration-message, .cta-text {
@@ -851,15 +880,96 @@ body {
     .contact-info-text {
         font-size: 0.9rem;
     }
+
+    .service-card {
+        min-height: 300px;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-title {
+        font-size: 1rem;
+    }
+
+    .service-description {
+        font-size: 0.8rem;
+    }
+
+    .btn, .contact-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .service-detail {
+        padding: 2rem 1rem;
+    }
+
+    .service-detail-title {
+        font-size: 1.5rem;
+    }
+
+    .service-detail-description {
+        font-size: 0.9rem;
+    }
+
+    .service-features li {
+        font-size: 0.9rem;
+    }
+
+    .contact-info-box {
+        padding: 1rem;
+    }
+
+    .contact-info-title {
+        font-size: 1.1rem;
+    }
+
+    .contact-info-text {
+        font-size: 0.8rem;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-section-content {
+        font-size: 0.9rem;
+    }
+
+    .about-features li {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    .copyright {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 400px) {
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-divider, .services-hero-divider, .contact-hero-divider, .about-hero-divider {
-        width: 250px;
+        max-width: 250px;
     }
 
     .logo img {
