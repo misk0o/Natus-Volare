@@ -90,16 +90,18 @@ body {
 .nav-links a {
     color: var(--secondary-color);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: opacity 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* Hero section */
@@ -726,16 +728,46 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
     .navbar-container {
-        flex-direction: column;
-        padding: 1rem;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem;
     }
 
     .nav-links {
-        margin-top: 1rem;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--navbar-bg);
+        padding: 1rem;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
     }
 
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
@@ -846,15 +878,31 @@ body {
 /* Mobile specific styles */
 @media (max-width: 480px) {
     .navbar {
-        padding: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    .navbar-container {
+        padding: 0.3rem;
     }
 
     .logo img {
-        height: 35px;
+        height: 30px;
     }
 
     .logo-text {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        padding: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
     }
 
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
