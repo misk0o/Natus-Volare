@@ -1,16 +1,35 @@
 <!DOCTYPE html>
+<!-- 
+    Kontaktná stránka pre Natus Volare - obsahuje kontaktné informácie a mapu
+    Contact page for Natus Volare - contains contact information and map
+-->
 <html lang="sk">
 <head>
+    <!-- Základné meta tagy pre správne zobrazenie a kódovanie / Basic meta tags for proper display and encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Natus Volare</title>
+    
+    <!-- 
+        Import fontov z Google Fonts
+        Importing fonts from Google Fonts:
+        - Bebas Neue: pre výrazné nadpisy / for bold headlines
+        - Montserrat: pre podnadpisy / for subheadings
+        - Open Sans: pre bežný text / for body text
+        - Raleway: pre špeciálne texty / for special text elements
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Montserrat+Alternates&family=Open+Sans:wght@400&family=Raleway:ital@1&display=swap" rel="stylesheet">
+    
+    <!-- Hlavný CSS súbor / Main CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- 
+        Navigačný panel - obsahuje logo a menu
+        Navigation bar - contains logo and menu 
+    -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="logo">
@@ -30,7 +49,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- 
+        Hero sekcia - hlavný vizuálny prvok stránky s pozadím a titulkom
+        Hero section - main visual element with background and title
+    -->
     <section class="contact-hero" style="background-image: url('images/kontakt main.jpg');">
         <div>
             <h1 class="contact-hero-title">Kontakt</h1>
@@ -38,13 +60,23 @@
         </div>
     </section>
 
-    <!-- Contact Intro -->
+    <!-- 
+        Úvodný text kontaktnej stránky - privítanie návštevníkov
+        Contact page introduction - welcoming visitors
+    -->
     <section class="contact-intro">
         <p>Máte otázky, záujem o naše služby alebo si chcete dohodnúť stretnutie?</p>
          <p>Sme tu pre vás a radi vám poskytneme všetky potrebné informácie.</p>
     </section>
 
-    <!-- Map Section -->
+    <!-- 
+        Sekcia s mapou a kontaktnými informáciami
+        Map section with contact information
+        - Obsahuje Google mapu s našou lokalitou
+        - Contains Google map with our location
+        - Box s kontaktnými údajmi (adresa, telefón, email)
+        - Contact information box (address, phone, email)
+    -->
     <section class="map-container">
         <div class="map-overlay"></div>
         <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.3012953608964!2d17.066673615637945!3d48.15977747922573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8939d8c06927%3A0xc67dae51fcc783f3!2sMedveďovej%2014%2C%20851%2004%20Bratislava!5e0!3m2!1ssk!2ssk!4v1621344896512!5m2!1ssk!2ssk" allowfullscreen="" loading="lazy"></iframe>
@@ -65,7 +97,10 @@
         </div>
     </section>
 
-    <!-- Collaboration Message -->
+    <!-- 
+        Záverečná správa pre návštevníkov
+        Final message for visitors
+    -->
     <section>
         <br><br>
         <div class="section-divider"></div>
@@ -74,7 +109,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 
+        Pätička - copyright a sociálne siete
+        Footer - copyright and social media links
+    -->
     <footer class="footer">
         <div class="copyright">
             Copyright © 2024, NatusVolare. Všetky práva vyhradené.
@@ -94,6 +132,7 @@
             </a>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
+
+
 </body>
 </html> 

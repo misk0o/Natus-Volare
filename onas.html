@@ -1,16 +1,35 @@
 <!DOCTYPE html>
+<!-- 
+    Stránka O nás pre Natus Volare - predstavenie spoločnosti a jej hodnôt
+    About Us page for Natus Volare - introduction of the company and its values
+-->
 <html lang="sk">
 <head>
+    <!-- Základné meta tagy pre správne zobrazenie a kódovanie / Basic meta tags for proper display and encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O nás - Natus Volare</title>
+    
+    <!-- 
+        Import fontov z Google Fonts
+        Importing fonts from Google Fonts:
+        - Bebas Neue: pre výrazné nadpisy / for bold headlines
+        - Montserrat: pre podnadpisy / for subheadings
+        - Open Sans: pre bežný text / for body text
+        - Raleway: pre špeciálne texty / for special text elements
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Montserrat+Alternates&family=Open+Sans:wght@400&family=Raleway:ital@1&display=swap" rel="stylesheet">
+    
+    <!-- Hlavný CSS súbor / Main CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- 
+        Navigačný panel - obsahuje logo a menu
+        Navigation bar - contains logo and menu 
+    -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="logo">
@@ -30,7 +49,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- 
+        Hero sekcia - hlavný vizuálny prvok stránky s pozadím a titulkom
+        Hero section - main visual element with background and title
+    -->
     <section class="about-hero" style="background-image: url('images/onas main.png');">
         <div>
             <h1 class="about-hero-title">O nás</h1>
@@ -38,7 +60,10 @@
         </div>
     </section>
 
-    <!-- Kto sme Section -->
+    <!-- 
+        Sekcia "Kto sme" - predstavenie spoločnosti a jej misie
+        "Who we are" section - introduction of the company and its mission
+    -->
     <section class="about-section">
         <h2 class="about-section-title">Kto sme?</h2>
         <div class="about-section-content">
@@ -48,7 +73,12 @@
         </div>
     </section>
 
-    <!-- Prečo si vybrať Natus Volare Section -->
+    <!-- 
+        Sekcia "Prečo si vybrať Natus Volare" - naše výhody a silné stránky
+        "Why choose Natus Volare" section - our advantages and strengths
+        - Zoznam kľúčových benefitov / List of key benefits
+        - Dôvody pre spoluprácu / Reasons for cooperation
+    -->
     <section class="about-section" style="background-color: var(--alternate-bg);">
         <h2 class="about-section-title">Prečo si vybrať Natus Volare?</h2>
         <div class="about-section-content">
@@ -64,9 +94,17 @@
         </div>
     </section>
 
-    <!-- Čo nás odlišuje Section -->
+    <!-- 
+        Sekcia "Čo nás odlišuje" - naše jedinečné vlastnosti
+        "What makes us different" section - our unique characteristics
+        - Filozofia spoločnosti / Company philosophy
+        - Kľúčové diferenciátory / Key differentiators
+    -->
     <section class="about-section">
         <h2 class="about-section-title">Čo nás odlišuje?</h2>
+        <div class="about-section-content">
+            <p>V spoločnosti Natus Volare veríme, že každý projekt je jedinečný a zaslúži si maximálnu pozornosť. Naša filozofia je o neustálom zdokonaľovaní a posúvaní hraníc možného, aby sme našim klientom priniesli nielen kvalitné riešenia, ale aj nové perspektívy. Nižšie nájdete, čo robí našu prácu výnimočnou.</p>
+        </div>
         <div class="about-section-content">
             <ul class="about-features">
                 <li>Neustále posúvame hranice možného, aby sme vám priniesli nové perspektívy a nápady.</li>
@@ -76,7 +114,12 @@
         </div>
     </section>
 
-    <!-- História spoločnosti Section -->
+    <!-- 
+        Sekcia "História spoločnosti" - náš príbeh a vývoj
+        "Company history" section - our story and development
+        - Pôvod a rast / Origin and growth
+        - Míľniky / Milestones
+    -->
     <section class="about-section" style="background-color: var(--alternate-bg);">
         <h2 class="about-section-title">História spoločnosti</h2>
         <div class="about-section-content">
@@ -84,14 +127,20 @@
         </div>
     </section>
 
-    <!-- Contact CTA Section -->
+    <!-- 
+        CTA sekcia pre kontakt - výzva na akciu
+        Contact Call-to-Action section - prompting user action
+    -->
     <section class="contact-section">
         <div class="section-divider"></div>
         <p class="collaboration-message">Ak ste nenašli čo hladáte, kontaktujte nás a my to vybavíme!</p>
         <a href="kontakt.html" class="contact-btn">Kontakt</a>
     </section>
 
-    <!-- Footer -->
+    <!-- 
+        Pätička - copyright a sociálne siete
+        Footer - copyright and social media links
+    -->
     <footer class="footer">
         <div class="copyright">
             Copyright © 2024, NatusVolare. Všetky práva vyhradené.
@@ -111,6 +160,6 @@
             </a>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
+
 </body>
 </html> 

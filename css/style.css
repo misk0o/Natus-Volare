@@ -1,11 +1,11 @@
-/* Global styles */
+/* Global styles - Definuje základné farby a premenné pre celú stránku */
 :root {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --background-color: #0a0a0a;
-    --alternate-bg: #1a1a1a;
-    --navbar-bg: rgba(10, 10, 10, 0.8);
-    --footer-bg: #0a0a0a;
+    --primary-color: #000000;    /* Hlavná farba (čierna) */
+    --secondary-color: #ffffff;  /* Sekundárna farba (biela) */
+    --background-color: #0a0a0a; /* Farba pozadia (tmavá) */
+    --alternate-bg: #1a1a1a;     /* Alternatívna farba pozadia */
+    --navbar-bg: rgba(10, 10, 10, 0.8); /* Farba pozadia navigácie s priehľadnosťou */
+    --footer-bg: #0a0a0a;        /* Farba pozadia pätičky */
 }
 
 @font-face {
@@ -28,18 +28,21 @@
     src: url('../fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf') format('opentype');
 }
 
+/* Základné nastavenia pre celú stránku */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Nastavenia pre HTML a BODY - zabezpečuje správne zobrazenie na celej šírke */
 html, body {
     width: 100%;
     overflow-x: hidden;
     position: relative;
 }
 
+/* Základné nastavenia pre BODY - definuje font, farby a flexbox layout */
 body {
     font-family: 'SourceSansPro-Regular', sans-serif;
     background-color: var(--background-color);
@@ -50,7 +53,7 @@ body {
     flex-direction: column;
 }
 
-/* Navbar styles */
+/* Štýly pre navigačnú lištu - fixná pozícia a efekt rozmazania pozadia */
 .navbar {
     position: fixed;
     top: 0;
@@ -205,7 +208,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Services section */
+/* Štýly pre sekciu služieb - grid layout pre karty služieb */
 .services {
     width: 100%;
     padding: 4rem 1rem;
@@ -213,6 +216,7 @@ body {
     margin: 0 auto;
 }
 
+/* Grid layout pre karty služieb - responzívne rozloženie */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -301,7 +305,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Contact section */
+/* Štýly pre kontaktnú sekciu - centrovanie obsahu */
 .contact-section {
     width: 100%;
     text-align: center;
@@ -343,7 +347,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Footer styles */
+/* Štýly pre pätičku - flexbox layout a sociálne ikony */
 .footer {
     width: 100%;
     background: var(--footer-bg);
@@ -559,7 +563,7 @@ body {
     width: 100%;
     height: 100%;
     border: 0;
-    filter: grayscale(70%);
+    filter: grayscale(0%);
 }
 
 .contact-info-box {
@@ -702,8 +706,9 @@ body {
     color: var(--background-color);
 }
 
-/* Responsive styles */
+/* Responzívne štýly pre rôzne veľkosti obrazoviek */
 @media (max-width: 1200px) {
+    /* Úpravy pre veľké obrazovky */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -731,6 +736,7 @@ body {
 }
 
 @media (max-width: 992px) {
+    /* Úpravy pre stredne veľké obrazovky */
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
         font-size: 3rem;
     }
@@ -757,6 +763,7 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Úpravy pre tablety */
     .navbar {
         padding: 0.5rem;
     }
@@ -885,6 +892,7 @@ body {
 }
 
 @media (max-width: 576px) {
+    /* Úpravy pre mobilné zariadenia */
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
         font-size: 2rem;
     }
@@ -1009,6 +1017,7 @@ body {
 }
 
 @media (max-width: 400px) {
+    /* Úpravy pre malé mobilné zariadenia */
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
         font-size: 1.8rem;
     }
@@ -1030,8 +1039,9 @@ body {
     }
 }
 
-/* Mobile specific styles */
+/* Špecifické štýly pre mobilné zariadenia */
 @media (max-width: 480px) {
+    /* Dodatočné úpravy pre mobilné zariadenia */
     .navbar {
         padding: 0.3rem;
     }
@@ -1161,6 +1171,7 @@ body {
 }
 
 @media (max-width: 360px) {
+    /* Úpravy pre najmenšie mobilné zariadenia */
     .hero-title, .services-hero-title, .contact-hero-title, .about-hero-title {
         font-size: 1.5rem;
     }

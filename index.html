@@ -1,16 +1,35 @@
 <!DOCTYPE html>
+<!-- 
+    Hlavný HTML dokument pre Natus Volare - profesionálne dronové služby
+    Main HTML document for Natus Volare - professional drone services 
+-->
 <html lang="sk">
 <head>
+    <!-- Základné meta tagy pre správne zobrazenie a kódovanie / Basic meta tags for proper display and encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natus Volare - Profesionálne dronové služby</title>
+    
+    <!-- 
+        Import fontov z Google Fonts
+        Importing fonts from Google Fonts:
+        - Bebas Neue: pre výrazné nadpisy / for bold headlines
+        - Montserrat: pre podnadpisy / for subheadings
+        - Open Sans: pre bežný text / for body text
+        - Raleway: pre špeciálne texty / for special text elements
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Montserrat+Alternates&family=Open+Sans:wght@400&family=Raleway:ital@1&display=swap" rel="stylesheet">
+    
+    <!-- Hlavný CSS súbor / Main CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- 
+        Navigačný panel - obsahuje logo a menu
+        Navigation bar - contains logo and menu 
+    -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="logo">
@@ -30,9 +49,11 @@
         </div>
     </nav>
     
-
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('images/domov main.jpg');">
+    <!-- 
+        Hero sekcia - hlavný vizuálny prvok stránky s pozadím a titulkom
+        Hero section - main visual element with background and title
+    -->
+    <section class="hero" style="background-image: url('images/home main 3.png');">
         <div class="hero-content">
             <h1 class="hero-title">Natus Volare</h1>
             <div class="hero-divider"></div>
@@ -40,7 +61,16 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- 
+        Sekcia služieb - grid s kartami jednotlivých služieb
+        Services section - grid with service cards
+        Každá karta obsahuje:
+        Each card contains:
+        - Obrázok / Image
+        - Názov služby / Service title
+        - Krátky popis / Brief description
+        - Tlačidlo na viac informácií / More info button
+    -->
     <section class="services">
         <div class="services-grid">
             <!-- Filmovanie a fotografovanie -->
@@ -135,14 +165,20 @@
         </div>
     </section>
 
-    <!-- Contact CTA Section -->
+    <!-- 
+        CTA sekcia pre kontakt - výzva na akciu
+        Contact Call-to-Action section - prompting user action
+    -->
     <section class="contact-section">
         <div class="section-divider"></div>
         <p class="collaboration-message">Ak ste nenašli čo hladáte, kontaktujte nás a my to vybavíme!</p>
         <a href="kontakt.html" class="contact-btn">Kontakt</a>
     </section>
 
-    <!-- Footer -->
+    <!-- 
+        Pätička - copyright a sociálne siete
+        Footer - copyright and social media links
+    -->
     <footer class="footer">
         <div class="copyright">
             Copyright © 2024, NatusVolare. Všetky práva vyhradené.
@@ -162,6 +198,6 @@
             </a>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
+
 </body>
 </html> 
